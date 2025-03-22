@@ -5,6 +5,7 @@ resource "aws_instance" "example" {
   instance_type     = var.inst_type
   key_name          = var.key_name
   availability_zone = data.aws_availability_zones.available.names[count.index]
+  security_groups   = var.security_group_names
 
   lifecycle {
     create_before_destroy = true

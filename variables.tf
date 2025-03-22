@@ -25,3 +25,7 @@ variable "num_instances" {
 variable "region" {
   type = string
 }
+
+variable "security_group_names" {
+  type = list(string)
+}
